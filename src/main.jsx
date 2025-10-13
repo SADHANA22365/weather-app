@@ -1,13 +1,13 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import App from "./App";
+import { HashRouter } from "react-router-dom";  // Use HashRouter
 import "./index.css";
-import { WeatherProvider } from "./context/WeatherContext";
 
-createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <WeatherProvider>
+    <HashRouter>
       <App />
-    </WeatherProvider>
+    </HashRouter>
   </React.StrictMode>
 );
