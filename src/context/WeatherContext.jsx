@@ -63,7 +63,7 @@ export const WeatherProvider = ({ children }) => {
     }
   };
 
-  const fetchForecastByCoords = async (lat, lon) => {
+const fetchForecastByCoords = async (lat, lon) => {
   try {
     const res = await axios.get(`${BASE}/forecast`, {
       params: { lat, lon, appid: API_KEY, units },
@@ -108,7 +108,6 @@ export const WeatherProvider = ({ children }) => {
     console.warn("Forecast error", err);
   }
 };
-
 
   const fetchByGeolocation = () => {
     if (!navigator.geolocation) return;

@@ -7,6 +7,7 @@ function dayLabel(dt, tz) {
   return names[d.getUTCDay()];
 }
 
+
 export default function Forecast({ data }) {
   if (!data?.list) return null;
   const tz = data.city?.timezone || 0;

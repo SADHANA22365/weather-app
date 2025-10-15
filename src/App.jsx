@@ -22,12 +22,13 @@ export default function App() {
 
   return (
     <div className={`app ${bgClass}`}>
-     <header className="topbar">
-       <h1 className="title">🌦️ WeatherFlow</h1>
-       <div className="top-actions">
-         <ThemeToggle />
-       </div>
-     </header>
+      <header className="topbar">
+        <h1 className="title">🌦️ WeatherFlow</h1>
+        <div className="top-actions">
+          <ThemeToggle />
+        </div>
+      </header>
+
 
       <main className="main container">
         <section className="left-col">
@@ -36,6 +37,7 @@ export default function App() {
           {loading && <Spinner />}
           {error && <p className="error">{error}</p>}
           {weather && <WeatherCard data={weather} units={units} />}
+
         </section>
 
         <aside className="right-col">
